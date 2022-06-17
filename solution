@@ -1,0 +1,20 @@
+class Solution {    
+    function longestPalindrome($s) 
+    {        
+        $length = strlen($s);
+        
+        for ($i = $l; $i > 0; $i--)
+        {  
+            for ($j = 0; $j <= $length - $i; $j++)
+            {  
+                $test = substr($s, $j, $i);
+
+                if ($test == strrev($test))
+                {
+                    return $test;
+                    break 2;
+                } 
+            }
+        }
+    } 
+}
